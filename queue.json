@@ -1,7 +1,21 @@
 {
  "defaults": {
   "categoryId": 20,
-  "tags": ["clix", "fortnite", "fortnite clips", "fncs", "twitch clips"]
+  "tags": [
+   "clix",
+   "fortnite",
+   "fortnite clips",
+   "fncs",
+   "twitch clips"
+  ]
  },
- "posts": []
+ "posts": [
+  {
+   "when": "2026-10-12T00:35:05+02:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1009_01_lost_10k.mp4",
+   "title": "Clix talked trash for 2 weeks… then lost $10,000 💀 #Clix #shorts",
+   "caption": "\"I backed up my team for two weeks… and I just lost $10,000\" 💀 Clix is NOT okay #Clix #fortnite #fortniteclips #twitchclips #gaming",
+   "status": "queued"
+  }
+ ]
 }
