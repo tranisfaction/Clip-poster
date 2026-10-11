@@ -103,7 +103,7 @@ def post_instagram(video: Path, post: dict) -> str:
         gh("release", "create", RELEASE, "--title", "media", "--notes", "Temporary video hosting for poster.py")
     gh("release", "upload", RELEASE, str(video), "--clobber")
     try:
-        token = os.environ["IG_TOKEN"]
+        token = os.environ["IG_TOKEN"].strip()
         box, _ = call(f"{IG}/me/media", {
             "media_type": "REELS", "caption": post["caption"], "access_token": token,
             "video_url": f"https://github.com/{repo}/releases/download/{RELEASE}/{video.name}"})
@@ -171,9 +171,33 @@ def refresh_ig():
     print(f"Instagram token extended for {new['expires_in'] // 86400} days")
 
 
+def check():
+    """Confirm the keys work without posting anything; results show as notices on the run."""
+    ok = True
+    try:
+        token, _ = call("https://oauth2.googleapis.com/token", {
+            "grant_type": "refresh_token", "client_id": os.environ["YT_CLIENT_ID"],
+            "client_secret": os.environ["YT_CLIENT_SECRET"], "refresh_token": os.environ["YT_REFRESH_TOKEN"]})
+        print(f"::notice::YouTube key works (scope {token['scope'].rsplit('/', 1)[-1]})")
+    except Exception as e:
+        ok = False
+        print(f"::error::YouTube key failed: {e}")
+    try:
+        token = os.environ["IG_TOKEN"].strip()
+        me, _ = call(f"{IG}/me?fields=username,account_type&access_token={token}")
+        print(f"::notice::Instagram token works for @{me['username']} ({me.get('account_type')})")
+        # only readable with the content_publish permission
+        call(f"{IG}/me/content_publishing_limit?access_token={token}")
+        print("::notice::Instagram publish permission is granted")
+    except Exception as e:
+        ok = False
+        print(f"::error::Instagram check failed: {str(e).replace(os.environ.get('IG_TOKEN', '-'), '***')}")
+    sys.exit(0 if ok else 1)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["run", "refresh-ig"])
+    ap.add_argument("command", choices=["run", "refresh-ig", "check"])
     ap.add_argument("--dry-run", action="store_true", help="list what would be posted, post nothing")
     args = ap.parse_args()
-    refresh_ig() if args.command == "refresh-ig" else run(args.dry_run)
+    {"refresh-ig": refresh_ig, "check": check}.get(args.command, lambda: run(args.dry_run))()

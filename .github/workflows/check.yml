@@ -1,0 +1,21 @@
+name: check
+
+# Confirms the YouTube and Instagram keys work. Posts nothing.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/check.yml
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check keys
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python3 poster.py check
