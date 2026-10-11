@@ -1,0 +1,18 @@
+name: refresh-ig
+
+on:
+  schedule:
+    - cron: "0 6 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extend the Instagram token
+        env:
+          # a personal access token with "Secrets: read and write" on this repo
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python3 poster.py refresh-ig
