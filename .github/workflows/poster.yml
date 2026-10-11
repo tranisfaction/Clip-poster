@@ -5,6 +5,10 @@ on:
     # GitHub starts scheduled runs late, so run 10 minutes ahead of the :30 / :00 slots;
     # poster.py waits for the exact time.
     - cron: "20,50 * * * *"
+  # a queue change runs it straight away, so "post now" does not wait for the next slot
+  push:
+    branches: [main]
+    paths: [queue.json]
   workflow_dispatch:
 
 permissions:

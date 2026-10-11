@@ -8,6 +8,7 @@ that are due, writes the public links back, and the workflow commits the file.
 A post in queue.json:
   {"when": "2026-10-12T20:30:00+02:00",            local time with UTC offset
    "drive": "https://drive.google.com/file/d/<id>/view",   shared "anyone with the link"
+                                    (or "url": a direct link, e.g. a file on this repo's clips branch)
    "title": "YouTube title", "caption": "Instagram caption",
    "status": "queued"}
 
@@ -56,15 +57,18 @@ def call(url: str, data=None, headers=None, method=None):
         raise RuntimeError(f"{e.code} from {url.split('?')[0]}: {e.read().decode('utf-8', 'replace')[:500]}")
 
 
-def download(drive_link: str, dest: Path) -> Path:
-    file_id = re.search(r"/d/([\w-]+)|[?&]id=([\w-]+)", drive_link)
-    if not file_id:
-        raise RuntimeError(f"Not a Drive file link: {drive_link}")
-    url = "https://drive.usercontent.google.com/download?export=download&confirm=t&id=" + (file_id[1] or file_id[2])
+def download(link: str, dest: Path) -> Path:
+    """Fetch the clip from a Drive share link or any direct URL (e.g. the repo's clips branch)."""
+    url = link
+    if "drive.google.com" in link:
+        file_id = re.search(r"/d/([\w-]+)|[?&]id=([\w-]+)", link)
+        if not file_id:
+            raise RuntimeError(f"Not a Drive file link: {link}")
+        url = "https://drive.usercontent.google.com/download?export=download&confirm=t&id=" + (file_id[1] or file_id[2])
     with urllib.request.urlopen(url, timeout=600) as r:
         data = r.read()
     if data[4:8] != b"ftyp":
-        raise RuntimeError("Drive did not return an MP4 — is the file shared with 'anyone with the link'?")
+        raise RuntimeError(f"{link} did not return an MP4 — is the file shared with 'anyone with the link'?")
     dest.write_bytes(data)
     return dest
 
@@ -142,7 +146,7 @@ def run(dry: bool):
             continue
         time.sleep(max(0, (when - datetime.now(timezone.utc)).total_seconds()))
         try:
-            video = download(post["drive"], Path(f"clip_{n}.mp4"))
+            video = download(post.get("url") or post["drive"], Path(f"clip_{n}.mp4"))
             # each platform is recorded as soon as it succeeds, so a retry never double-posts
             if not post.get("youtube"):
                 post["youtube"] = post_youtube(video, post, queue.get("defaults", {}))
