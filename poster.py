@@ -77,7 +77,7 @@ def post_youtube(video: Path, post: dict, defaults: dict) -> str:
     meta = {
         "snippet": {"title": post["title"], "description": post.get("description", post["caption"]),
                     "tags": post.get("tags", defaults.get("tags", [])),
-                    "categoryId": str(defaults.get("categoryId", 20))},
+                    "categoryId": str(post.get("categoryId", defaults.get("categoryId", 20)))},
         "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
     }
     size = video.stat().st_size
