@@ -143,7 +143,7 @@ def check():
                 raise RuntimeError("the page asks to sign in — the exported login is not accepted here")
             # the Submissions page only lists clips for a signed-in account
             app.goto(app.url.split("/c/")[0] + "/c/submissions", wait_until="domcontentloaded")
-            clips = app.get_by_role("button", name="Clips").first
+            clips = app.locator('button:has-text("Clips")').first
             clips.wait_for(timeout=30000)
             print(f"::notice::Whop login works from GitHub (Submit clip button reached; Submissions shows {' '.join(clips.inner_text().split())})", flush=True)
         except Exception as e:
