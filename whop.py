@@ -141,7 +141,11 @@ def check():
             signed_out = page.get_by_text("Enter your email").count() or page.get_by_role("button", name="Sign in").count()
             if signed_out:
                 raise RuntimeError("the page asks to sign in — the exported login is not accepted here")
-            print("::notice::Whop login works from GitHub (campaign page and Submit clip button reached)")
+            # the Submissions page only lists clips for a signed-in account
+            app.goto(app.url.split("/c/")[0] + "/c/submissions", wait_until="domcontentloaded")
+            clips = app.get_by_role("button", name="Clips").first
+            clips.wait_for(timeout=30000)
+            print(f"::notice::Whop login works from GitHub (Submit clip button reached; Submissions shows {' '.join(clips.inner_text().split())})", flush=True)
         except Exception as e:
             text = " ".join(page.inner_text("body").split())[:200] if page.url.startswith("http") else ""
             print(f"::error::Whop check failed: {str(e).splitlines()[0][:200]} | page says: {text}")
