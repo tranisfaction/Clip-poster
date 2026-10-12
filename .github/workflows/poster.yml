@@ -2,28 +2,47 @@ name: poster
 
 on:
   schedule:
-    # GitHub starts scheduled runs late, so run 10 minutes ahead of the :30 / :00 slots;
-    # poster.py waits for the exact time.
+    # only a backup: GitHub starts scheduled runs hours late or skips them, so the
+    # "wait" job below keeps one run up that watches the queue itself
     - cron: "20,50 * * * *"
-  # a queue change runs it straight away, so "post now" does not wait for the next slot
+  # a queue change (or a change to the worker itself) starts it straight away
   push:
     branches: [main]
-    paths: [queue.json]
+    paths: [queue.json, poster.py, .github/workflows/poster.yml]
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: poster
-  cancel-in-progress: false
+  actions: write
 
 jobs:
-  post:
+  wait:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 330
+    outputs:
+      next: ${{ steps.wait.outputs.next }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Wait for the next post
+        id: wait
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 poster.py wait
+
+  post:
+    needs: wait
+    if: needs.wait.outputs.next == 'due'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    concurrency:
+      group: poster
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Post what is due
         env:
           GH_TOKEN: ${{ github.token }}
@@ -45,3 +64,14 @@ jobs:
           git config user.email "poster@users.noreply.github.com"
           git add queue.json
           git diff --cached --quiet || (git commit -m "Update queue" && git pull --rebase && git push)
+
+  # keeps the chain going: a fresh run takes over the watching
+  again:
+    needs: [wait, post]
+    if: always() && (needs.wait.outputs.next == 'due' || needs.wait.outputs.next == 'again')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the next run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run poster.yml --repo "$GITHUB_REPOSITORY" --ref main

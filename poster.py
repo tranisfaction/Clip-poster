@@ -17,6 +17,7 @@ more than MAX_LATE hours overdue becomes "missed" instead of going out late.
 
 Usage:
   python poster.py run [--dry-run]     publish what is due
+  python poster.py wait                keep the runner up until the next post is about due
   python poster.py refresh-ig          extend the Instagram token (monthly workflow)
 
 Secrets come from the environment: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN, IG_TOKEN.
@@ -37,6 +38,7 @@ from pathlib import Path
 QUEUE = Path(__file__).resolve().parent / "queue.json"
 LOOKAHEAD = 12     # minutes: a run picks up posts due this soon and waits for the exact time
 MAX_LATE = 3       # hours: older than this is marked "missed"
+KEEP = 300         # minutes one run keeps watching the queue before it hands over to a fresh run
 RELEASE = "media"  # GitHub release that briefly hosts the video so Instagram can fetch it
 IG = "https://graph.instagram.com"
 
@@ -168,6 +170,51 @@ def run(dry: bool):
     sys.exit(1 if failed else 0)
 
 
+def someone_else_waiting() -> bool:
+    """True when an older run of this workflow already holds a runner for the queue."""
+    repo, me = os.environ["GITHUB_REPOSITORY"], int(os.environ["GITHUB_RUN_ID"])
+    try:
+        runs = json.loads(gh("api", f"repos/{repo}/actions/workflows/poster.yml/runs?status=in_progress&per_page=30"))
+        for r in runs["workflow_runs"]:
+            if r["id"] < me:
+                jobs = json.loads(gh("api", f"repos/{repo}/actions/runs/{r['id']}/jobs"))["jobs"]
+                if any(j["name"] == "wait" and j["status"] == "in_progress" for j in jobs):
+                    return True
+    except Exception as e:
+        print("  ! could not look for other runs:", e)
+    return False
+
+
+def wait():
+    """Hold the runner until the next post is about due, then tell the workflow what to do.
+
+    GitHub starts scheduled runs hours late or not at all, so one run stays up and
+    watches the queue instead: "due" hands over to the posting job, "again" starts a
+    fresh run before this one hits the job time limit, "none" stops.
+    """
+    def out(what: str):
+        print("next:", what)
+        if os.environ.get("GITHUB_OUTPUT"):
+            with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                f.write(f"next={what}\n")
+
+    retry = os.environ.get("GITHUB_EVENT_NAME") == "schedule"   # only timed runs retry a failed post
+    end = time.time() + KEEP * 60
+    while time.time() < end:
+        subprocess.run(["git", "pull", "-q", "--rebase"], capture_output=True)   # the queue may have changed
+        posts = json.loads(QUEUE.read_text(encoding="utf-8"))["posts"]
+        times = [datetime.fromisoformat(p["when"]) for p in posts
+                 if p.get("status") == "queued" and (retry or not p.get("error"))]
+        if not times:
+            return out("none")
+        if min(times) <= datetime.now(timezone.utc) + timedelta(minutes=2):
+            return out("due")
+        if someone_else_waiting():
+            return out("none")
+        time.sleep(60)
+    out("again")
+
+
 def refresh_ig():
     """Extend the 60-day Instagram token and store it back as the IG_TOKEN secret."""
     new, _ = call(f"{IG}/refresh_access_token?grant_type=ig_refresh_token&access_token={os.environ['IG_TOKEN']}")
@@ -201,7 +248,7 @@ def check():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["run", "refresh-ig", "check"])
+    ap.add_argument("command", choices=["run", "wait", "refresh-ig", "check"])
     ap.add_argument("--dry-run", action="store_true", help="list what would be posted, post nothing")
     args = ap.parse_args()
-    {"refresh-ig": refresh_ig, "check": check}.get(args.command, lambda: run(args.dry_run))()
+    {"refresh-ig": refresh_ig, "check": check, "wait": wait}.get(args.command, lambda: run(args.dry_run))()
