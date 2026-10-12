@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - .github/workflows/check.yml
+      - whop.py
 
 jobs:
   check:

@@ -97,6 +97,11 @@ def playwright():
         pip = [sys.executable, "-m", "pip", "install", "--quiet", "playwright"]
         if subprocess.run(pip).returncode:   # the runner's system Python refuses plain installs
             subprocess.run(pip + ["--break-system-packages"], check=True)
+        # a per-user install lands in a folder this running interpreter has not looked at yet
+        import importlib
+        import site
+        site.addsitedir(site.getusersitepackages())
+        importlib.invalidate_caches()
         from playwright.sync_api import sync_playwright
     return sync_playwright()
 
