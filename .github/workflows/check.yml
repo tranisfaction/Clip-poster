@@ -1,6 +1,6 @@
 name: check
 
-# Confirms the YouTube and Instagram keys work. Posts nothing.
+# Confirms the YouTube and Instagram keys and the Whop login work. Posts and submits nothing.
 on:
   workflow_dispatch:
   push:
@@ -19,3 +19,12 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python3 poster.py check
+
+  whop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Whop login
+        env:
+          WHOP_STATE: ${{ secrets.WHOP_STATE }}
+        run: if command -v xvfb-run >/dev/null; then xvfb-run -a python3 whop.py check; else python3 whop.py check; fi

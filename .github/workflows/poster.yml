@@ -32,6 +32,12 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python3 poster.py run
+      - name: Submit to Whop
+        # Whop takes a link only within 30 minutes of posting, so this follows straight on
+        if: always()
+        env:
+          WHOP_STATE: ${{ secrets.WHOP_STATE }}
+        run: if command -v xvfb-run >/dev/null; then xvfb-run -a python3 whop.py run; else python3 whop.py run; fi
       - name: Save the queue
         if: always()
         run: |

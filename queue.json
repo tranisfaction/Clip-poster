@@ -7,7 +7,10 @@
    "fortnite clips",
    "fncs",
    "twitch clips"
-  ]
+  ],
+  "whop_campaigns": {
+   "CLIX": "/c/campaigns/7a6a234b-1e9e-4da3-a600-54cc3142e710"
+  }
  },
  "posts": [
   {
@@ -18,7 +21,8 @@
    "status": "posted",
    "youtube": "https://www.youtube.com/shorts/oJ1dge1kHlQ",
    "instagram": "https://www.instagram.com/reel/DeXvseokuGz/",
-   "posted_at": "2026-10-11T22:36:28+00:00"
+   "posted_at": "2026-10-11T22:36:28+00:00",
+   "whop_result": {}
   },
   {
    "when": "2026-10-12T13:57:11+02:00",
@@ -28,7 +32,8 @@
    "status": "posted",
    "youtube": "https://www.youtube.com/shorts/ynZJXNjv_iM",
    "instagram": "https://www.instagram.com/reel/DeZLdFgj7YQ/",
-   "posted_at": "2026-10-12T11:58:11+00:00"
+   "posted_at": "2026-10-12T11:58:11+00:00",
+   "whop_result": {}
   }
  ]
 }
