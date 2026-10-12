@@ -147,6 +147,23 @@
    ],
    "categoryId": 24,
    "status": "queued"
+  },
+  {
+   "when": "2026-10-14T00:30:00+02:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1009_04_who_is_that.mp4",
+   "title": "Clix had no idea who they were… then lost $10K to them 💀 #Clix #shorts",
+   "caption": "Clix hears the other team's lineup: \"who is THAT?\" 💀 …then lost $10,000 to them #Clix #fortnite #fortniteclips #twitchclips #gaming",
+   "status": "queued",
+   "tags": [
+    "clix",
+    "fortnite",
+    "fortnite clips",
+    "fncs",
+    "twitch clips"
+   ],
+   "categoryId": 20,
+   "campaign": "clix",
+   "whop": "/c/campaigns/7a6a234b-1e9e-4da3-a600-54cc3142e710"
   }
  ]
 }
