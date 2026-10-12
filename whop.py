@@ -132,7 +132,7 @@ def run():
 
 
 def check():
-    campaign = sys.argv[2] if len(sys.argv) > 2 else json.loads(QUEUE.read_text(encoding="utf-8"))["defaults"]["whop_campaigns"]["CLIX"]
+    campaign = sys.argv[2] if len(sys.argv) > 2 else next(iter(json.loads(QUEUE.read_text(encoding="utf-8"))["defaults"]["campaigns"].values()))["whop"]
     with playwright() as p:
         browser, page = browser_page(p)
         try:
