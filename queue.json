@@ -212,7 +212,10 @@
     "funny"
    ],
    "categoryId": 24,
-   "status": "queued"
+   "status": "posted",
+   "youtube": "https://www.youtube.com/shorts/rBQTVUwcvQw",
+   "instagram": "https://www.instagram.com/reel/DedGZORAN46/",
+   "posted_at": "2026-10-14T00:30:54+00:00"
   },
   {
    "when": "2026-10-14T20:30:00+02:00",
