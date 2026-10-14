@@ -230,7 +230,10 @@
     "funny"
    ],
    "categoryId": 24,
-   "status": "queued"
+   "status": "posted",
+   "youtube": "https://www.youtube.com/shorts/JzPuFbgG6aA",
+   "instagram": "https://www.instagram.com/reel/DefB_PzD0XU/",
+   "posted_at": "2026-10-14T18:30:53+00:00"
   },
   {
    "when": "2026-10-15T00:30:00+02:00",
