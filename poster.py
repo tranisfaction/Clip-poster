@@ -11,6 +11,8 @@ A post in queue.json:
                                     (or "url": a direct link, e.g. a file on this repo's clips branch)
    "title": "YouTube title", "caption": "Instagram caption",
    "status": "queued"}
+Optional "sites": ["youtube"] (any of youtube, instagram, tiktok) limits a post to those
+platforms, so one clip can go to Instagram/TikTok now and to YouTube once its quota is back.
 
 After posting it gains "youtube" / "instagram" links and status "posted"; a post
 more than MAX_LATE hours overdue becomes "missed" instead of going out late.
@@ -151,8 +153,10 @@ def run(dry: bool):
             video = download(post.get("url") or post["drive"], Path(f"clip_{n}.mp4"))
             # each platform is recorded as soon as it succeeds, so a retry never double-posts;
             # one platform failing (YouTube's daily upload quota, say) doesn't stop the others
-            uploads = (("youtube", lambda: post_youtube(video, post, queue.get("defaults", {}))),
-                       ("instagram", lambda: post_instagram(video, post)))
+            uploads = [(site, upload) for site, upload in
+                       (("youtube", lambda: post_youtube(video, post, queue.get("defaults", {}))),
+                        ("instagram", lambda: post_instagram(video, post)))
+                       if site in post.get("sites", (site,))]
             for site, upload in uploads:
                 if post.get(site) or post.get(f"{site}_error"):
                     continue
@@ -163,7 +167,7 @@ def run(dry: bool):
                     post[f"{site}_error"] = str(e)[:300]
                     failed = True
                     print(f"  ! {site} failed:", e)
-            if not (post.get("youtube") or post.get("instagram")):
+            if uploads and not any(post.get(s) for s, _ in uploads):
                 # nothing went up: clear the per-site errors so a retry tries both again
                 raise RuntimeError("; ".join(post.pop(f"{s}_error", "") for s, _ in uploads))
             post["status"] = "posted"

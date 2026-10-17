@@ -109,7 +109,7 @@ def pending(queue: dict) -> list:
     now = datetime.now(timezone.utc)
     out = []
     for post in queue["posts"]:
-        if post.get("status") != "posted" or "tiktok" in post or post.get("tiktok_error"):
+        if post.get("status") != "posted" or "tiktok" in post or post.get("tiktok_error")                 or "tiktok" not in post.get("sites", ("tiktok",)):
             continue
         if not post.get("posted_at") or now - datetime.fromisoformat(post["posted_at"]) > timedelta(minutes=MAX_LATE):
             continue
