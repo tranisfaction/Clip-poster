@@ -558,7 +558,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_03_henchmen_here.mp4",
    "title": "Yeat's henchmen showed up at Clix's house 💀 #Clix #Yeat #shorts",
    "caption": "Yeat sent masked henchmen to Clix's house mid-stream 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -569,7 +569,15 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/famufToYeEY",
+   "instagram": "https://www.instagram.com/reel/DenFDZYn7jc/",
+   "posted_at": "2026-10-17T21:31:43+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "submitted",
+    "instagram": "submitted"
+   }
   },
   {
    "when": "2026-10-18T00:30:00+02:00",
