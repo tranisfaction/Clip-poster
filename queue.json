@@ -459,7 +459,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1010_09_retirement.mp4",
    "title": "Lacy's retirement speech on Clix's stream 😭 #Clix #shorts",
    "caption": "\"Carried Clix to his only FNCS win\" 😭 Lacy announces his retirement #Clix #fortnite #fortniteclips #twitchclips #gaming",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "fortnite",
@@ -469,7 +469,14 @@
    ],
    "categoryId": 20,
    "campaign": "clix",
-   "whop": "/c/campaigns/7a6a234b-1e9e-4da3-a600-54cc3142e710"
+   "whop": "/c/campaigns/7a6a234b-1e9e-4da3-a600-54cc3142e710",
+   "youtube": "https://www.youtube.com/shorts/XrHv08bgJqM",
+   "instagram": "https://www.instagram.com/reel/Dek02seCTUA/",
+   "posted_at": "2026-10-17T00:31:44+00:00",
+   "whop_result": {
+    "youtube": "submitted",
+    "instagram": "submitted"
+   }
   }
  ]
 }
