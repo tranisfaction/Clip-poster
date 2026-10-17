@@ -32,6 +32,27 @@
     ],
     "categoryId": 20,
     "rules": "https://reachclipping.com/Clix"
+   },
+   "clix_yeat": {
+    "title": "Fortnite x Clix x Yeat | ClipFarm",
+    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+    "streamer": "CLIX",
+    "caption_needs": [
+     "Clix",
+     "#fortnite",
+     "#yeatxclix",
+     "#yeat"
+    ],
+    "tags": [
+     "clix",
+     "yeat",
+     "fortnite",
+     "yeatxclix",
+     "twizzy",
+     "fortnite clips"
+    ],
+    "categoryId": 20,
+    "rules": "https://whop.com/contentrewards/exp_KZckYGtrnbujDg/app/ (closes 2026-10-20 14:00 ET; clips from the 10.16.26 Clix x Yeat stream only)"
    }
   }
  },

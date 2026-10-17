@@ -149,13 +149,23 @@ def run(dry: bool):
         time.sleep(max(0, (when - datetime.now(timezone.utc)).total_seconds()))
         try:
             video = download(post.get("url") or post["drive"], Path(f"clip_{n}.mp4"))
-            # each platform is recorded as soon as it succeeds, so a retry never double-posts
-            if not post.get("youtube"):
-                post["youtube"] = post_youtube(video, post, queue.get("defaults", {}))
-                print("  ", post["youtube"])
-            if not post.get("instagram"):
-                post["instagram"] = post_instagram(video, post)
-                print("  ", post["instagram"])
+            # each platform is recorded as soon as it succeeds, so a retry never double-posts;
+            # one platform failing (YouTube's daily upload quota, say) doesn't stop the others
+            uploads = (("youtube", lambda: post_youtube(video, post, queue.get("defaults", {}))),
+                       ("instagram", lambda: post_instagram(video, post)))
+            for site, upload in uploads:
+                if post.get(site) or post.get(f"{site}_error"):
+                    continue
+                try:
+                    post[site] = upload()
+                    print("  ", post[site])
+                except Exception as e:
+                    post[f"{site}_error"] = str(e)[:300]
+                    failed = True
+                    print(f"  ! {site} failed:", e)
+            if not (post.get("youtube") or post.get("instagram")):
+                # nothing went up: clear the per-site errors so a retry tries both again
+                raise RuntimeError("; ".join(post.pop(f"{s}_error", "") for s, _ in uploads))
             post["status"] = "posted"
             post["posted_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             post.pop("error", None)
