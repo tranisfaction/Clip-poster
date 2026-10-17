@@ -1,12 +1,13 @@
 name: check
 
-# Confirms the YouTube and Instagram keys and the Whop login work. Posts and submits nothing.
+# Confirms the YouTube and Instagram keys and the TikTok and Whop logins work. Posts and submits nothing.
 on:
   workflow_dispatch:
   push:
     paths:
       - .github/workflows/check.yml
       - whop.py
+      - tiktok.py
 
 jobs:
   check:
@@ -29,3 +30,19 @@ jobs:
         env:
           WHOP_STATE: ${{ secrets.WHOP_STATE }}
         run: if command -v xvfb-run >/dev/null; then xvfb-run -a python3 whop.py check; else python3 whop.py check; fi
+
+  tiktok:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check TikTok login
+        env:
+          TIKTOK_STATE: ${{ secrets.TIKTOK_STATE }}
+        run: if command -v xvfb-run >/dev/null; then xvfb-run -a python3 tiktok.py check; else python3 tiktok.py check; fi
+      - name: Keep the screenshot
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiktok-check
+          path: "*.png"
+          if-no-files-found: ignore

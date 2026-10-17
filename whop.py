@@ -1,7 +1,7 @@
 """
 whop.py — Submit freshly posted clips to their Whop Content Rewards campaign.
 
-Runs on GitHub Actions right after poster.py. Whop only accepts a link within
+Runs on GitHub Actions right after poster.py and tiktok.py. Whop only accepts a link within
 30 minutes of posting, so this takes every post in queue.json that has a "whop"
 campaign path and links without a result yet, and submits each link through the
 campaign's "Submit clip" form in a real Chrome window (under xvfb).
@@ -23,7 +23,7 @@ from pathlib import Path
 QUEUE = Path(__file__).resolve().parent / "queue.json"
 APP_PAGE = "https://whop.com/discover/app/app_QRxsQodZgK1r4D/"   # Content Rewards app
 WINDOW = 29        # minutes after posting that Whop still takes the link
-SITES = ("youtube", "instagram")
+SITES = ("youtube", "instagram", "tiktok")
 
 
 def open_app(page, campaign: str):

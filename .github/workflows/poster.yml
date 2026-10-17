@@ -8,7 +8,7 @@ on:
   # a queue change (or a change to the worker itself) starts it straight away
   push:
     branches: [main]
-    paths: [queue.json, poster.py, .github/workflows/poster.yml]
+    paths: [queue.json, poster.py, tiktok.py, .github/workflows/poster.yml]
   workflow_dispatch:
 
 permissions:
@@ -51,6 +51,19 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
         run: python3 poster.py run
+      - name: Post to TikTok
+        # uploads what poster.py just posted; its link then goes to Whop with the others
+        if: always()
+        env:
+          TIKTOK_STATE: ${{ secrets.TIKTOK_STATE }}
+        run: if command -v xvfb-run >/dev/null; then xvfb-run -a python3 tiktok.py run; else python3 tiktok.py run; fi
+      - name: Keep failure screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: "*.png"
+          if-no-files-found: ignore
       - name: Submit to Whop
         # Whop takes a link only within 30 minutes of posting, so this follows straight on
         if: always()
