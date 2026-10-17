@@ -128,7 +128,7 @@ def run():
     # the same file poster.py downloaded, if this job still has it
     from poster import download
     failed = False
-    with playwright() as p:
+    with playwright("TIKTOK_STATE") as p:
         browser, page = browser_page(p)
         for post in todo:
             n = queue["posts"].index(post)
@@ -149,7 +149,7 @@ def run():
 
 
 def check():
-    with playwright() as p:
+    with playwright("TIKTOK_STATE") as p:
         browser, page = browser_page(p)
         try:
             page.goto(UPLOAD, wait_until="domcontentloaded")

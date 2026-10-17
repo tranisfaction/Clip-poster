@@ -87,9 +87,9 @@ def save(queue: dict):
     QUEUE.write_text(json.dumps(queue, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def playwright():
-    if not os.environ.get("WHOP_STATE", "").strip():
-        print("::error::Whop: the WHOP_STATE secret is missing")
+def playwright(secret: str = "WHOP_STATE"):
+    if not os.environ.get(secret, "").strip():
+        print(f"::error::{secret.split('_')[0].title()}: the {secret} secret is missing")
         sys.exit(1)
     try:
         from playwright.sync_api import sync_playwright
