@@ -800,7 +800,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_14_payphone.mp4",
    "title": "Yeat only knows Stable Ronaldo as 'the payphone guy' 💀 #Clix #Yeat #shorts",
    "caption": "Clix asked Yeat if he knows Stable Ronaldo 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -815,7 +815,13 @@
    "sites": [
     "instagram",
     "tiktok"
-   ]
+   ],
+   "instagram": "https://www.instagram.com/reel/DepHfS5Dmy-/",
+   "posted_at": "2026-10-18T16:31:27+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "instagram": "NOT confirmed: Page.wait_for_selector: Timeout 45000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T20:00:00+02:00",
