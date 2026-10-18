@@ -828,7 +828,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_20_jared.mp4",
    "title": "Yeat's henchmen haven't moved for an hour 💀 #Clix #Yeat #shorts",
    "caption": "\"Say hi to Jared in the back\" 💀 Yeat's henchmen haven't moved behind Clix for an hour #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -839,7 +839,16 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/MJQ1ZP-4kGs",
+   "instagram": "https://www.instagram.com/reel/DepRtcrjCUq/",
+   "posted_at": "2026-10-18T18:00:29+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7698069456811019542",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "tiktok": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T21:30:00+02:00",
