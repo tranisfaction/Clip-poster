@@ -884,7 +884,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_08_yeat_answers.mp4",
    "title": "Interviewing Yeat be like 💀 #Clix #Yeat #shorts",
    "caption": "Clix interviewing Yeat be like 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -895,7 +895,16 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/yf2qbfCmP44",
+   "instagram": "https://www.instagram.com/reel/DepmX9dk8_s/",
+   "posted_at": "2026-10-18T21:01:16+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7698116018924834070",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "tiktok": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-19T00:30:00+02:00",
