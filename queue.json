@@ -774,7 +774,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_12_handshake.mp4",
    "title": "Clix asked Yeat for a custom handshake 💀 #Clix #Yeat #shorts",
    "caption": "Clix: \"Would you make a custom handshake with me?\" Yeat: \"Hell nah\" 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -785,7 +785,15 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/Gkvh5NiBFYg",
+   "instagram": "https://www.instagram.com/reel/Deo9HiUCjYV/",
+   "posted_at": "2026-10-18T15:00:41+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T18:30:00+02:00",
