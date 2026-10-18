@@ -1161,10 +1161,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-18T16:15:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "tiktok"
-   ]
+   ],
+   "posted_at": "2026-10-18T14:15:00+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7698011317247970582",
+   "whop_result": {
+    "tiktok": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   }
  ]
 }
