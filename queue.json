@@ -664,7 +664,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_11_second_place.mp4",
    "title": "Yeat thinks Clix got SECOND at the World Cup 💀 #Clix #Yeat #shorts",
    "caption": "\"You got second place, right?\" 💀 Yeat thinks Clix came second at the World Cup #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -679,7 +679,14 @@
    "sites": [
     "instagram",
     "tiktok"
-   ]
+   ],
+   "instagram": "https://www.instagram.com/reel/DengaeQDNUD/",
+   "posted_at": "2026-10-18T01:30:43+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7697814288492170519",
+   "whop_result": {
+    "instagram": "submitted",
+    "tiktok": "submitted"
+   }
   },
   {
    "when": "2026-10-18T04:30:00+02:00",
