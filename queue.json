@@ -638,7 +638,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_06_pinata.mp4",
    "title": "Yeat's henchmen brought Clix a piñata… the pickaxe BROKE 💀 #Clix #Yeat #shorts",
    "caption": "\"The pickaxe broke!\" 💀 Yeat's henchmen brought Clix a piñata and it did NOT go well #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -649,7 +649,15 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/ZViCydhKeUQ",
+   "instagram": "https://www.instagram.com/reel/DenZjPnDbpT/",
+   "posted_at": "2026-10-18T00:30:43+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "submitted",
+    "instagram": "submitted"
+   }
   },
   {
    "when": "2026-10-18T03:30:00+02:00",
