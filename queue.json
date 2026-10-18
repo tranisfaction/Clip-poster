@@ -855,7 +855,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_21_minions.mp4",
    "title": "Clix asked Yeat to send the henchmen home 💀 #Clix #Yeat #shorts",
    "caption": "Clix: \"Can you tell your minions to dip?\" Yeat: \"I'm telling them to stick around\" 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -870,7 +870,14 @@
    "sites": [
     "instagram",
     "tiktok"
-   ]
+   ],
+   "instagram": "https://www.instagram.com/reel/DepcCAdiaan/",
+   "posted_at": "2026-10-18T19:30:56+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7698092730118982934",
+   "whop_result": {
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "tiktok": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T23:00:00+02:00",
