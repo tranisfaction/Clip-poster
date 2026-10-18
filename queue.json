@@ -693,7 +693,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_09_40000_songs.mp4",
    "title": "Yeat has 40,000 unreleased songs 😳 #Clix #Yeat #shorts",
    "caption": "Yeat told Clix he has 40,000 unreleased songs 😳 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -708,7 +708,14 @@
    "sites": [
     "instagram",
     "tiktok"
-   ]
+   ],
+   "instagram": "https://www.instagram.com/reel/DennSG6Ejob/",
+   "posted_at": "2026-10-18T02:30:41+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7697829635928771862",
+   "whop_result": {
+    "instagram": "submitted",
+    "tiktok": "submitted"
+   }
   },
   {
    "when": "2026-10-18T14:00:00+02:00",
