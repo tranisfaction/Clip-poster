@@ -748,7 +748,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_13_aliens.mp4",
    "title": "Yeat describes the aliens he saw 👽 #Clix #Yeat #shorts",
    "caption": "Clix asked Yeat what the aliens looked like 👽 \"a regular person face\" #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -759,7 +759,15 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/Q9_UlORXATI",
+   "instagram": "https://www.instagram.com/reel/Deoy5Y6CHX1/",
+   "posted_at": "2026-10-18T13:31:34+00:00",
+   "tiktok_error": "the upload did not finish within 10 minutes",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T17:00:00+02:00",
