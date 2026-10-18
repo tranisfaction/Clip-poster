@@ -722,7 +722,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_07_quit_cereal.mp4",
    "title": "Yeat QUIT cereal 💀 #Clix #Yeat #shorts",
    "caption": "Yeat told Clix he quit cereal 💀 #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -733,7 +733,15 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/DnuCrz5EmSw",
+   "instagram": "https://www.instagram.com/reel/DeoohNsG1JM/",
+   "posted_at": "2026-10-18T12:00:44+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.click: Timeout 30000ms exceeded.",
+    "instagram": "NOT confirmed: Locator.click: Timeout 30000ms exceeded."
+   }
   },
   {
    "when": "2026-10-18T15:30:00+02:00",
