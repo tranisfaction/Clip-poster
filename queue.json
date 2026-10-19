@@ -995,7 +995,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_23_yeat_dub.mp4",
    "title": "Clix and Yeat got the dub 🏆 #Clix #Yeat #shorts",
    "caption": "Clix and Yeat got the dub 🏆🔥 \"100% accuracy too\" #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -1006,7 +1006,16 @@
    ],
    "categoryId": 20,
    "campaign": "clix_yeat",
-   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a"
+   "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
+   "youtube": "https://www.youtube.com/shorts/xFxo0elkITE",
+   "instagram": "https://www.instagram.com/reel/DerUL7Hk3pL/",
+   "posted_at": "2026-10-19T13:01:19+00:00",
+   "tiktok": "https://www.tiktok.com/@clipping.mach1ne/video/7698363357622979862",
+   "whop_result": {
+    "youtube": "submitted",
+    "instagram": "NOT confirmed: Locator.inner_text: Error: strict mode violation: locator(\"[role=dialog]\") resolved to 2 elements:",
+    "tiktok": "submitted"
+   }
   },
   {
    "when": "2026-10-19T18:00:00+02:00",
