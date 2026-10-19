@@ -967,7 +967,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_16_code_clix.mp4",
    "title": "He bought the whole Yeat bundle… and didn't use code Clix 💀 #Clix #Yeat #shorts",
    "caption": "Imagine buying the whole Yeat bundle and not using code Clix 💀 W Yeat #Clix #fortnite #yeatxclix #yeat #twizzy",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "clix",
     "yeat",
@@ -982,7 +982,13 @@
    "sites": [
     "instagram",
     "tiktok"
-   ]
+   ],
+   "instagram": "https://www.instagram.com/reel/DeqFNX5jOeB/",
+   "posted_at": "2026-10-19T01:30:48+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "instagram": "submitted"
+   }
   },
   {
    "when": "2026-10-19T15:00:00+02:00",
