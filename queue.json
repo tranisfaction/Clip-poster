@@ -1105,10 +1105,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-19T16:30:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/0vZT7iX-APA",
+   "posted_at": "2026-10-19T14:30:02+00:00",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.inner_text: Error: strict mode violation: locator(\"[role=dialog]\") resolved to 2 elements:"
+   }
   },
   {
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_09_40000_songs.mp4",
