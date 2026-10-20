@@ -1165,10 +1165,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-20T13:00:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/XSYWmuwHAPE",
+   "posted_at": "2026-10-20T11:00:05+00:00",
+   "whop_result": {
+    "youtube": "submitted"
+   }
   },
   {
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_14_payphone.mp4",
