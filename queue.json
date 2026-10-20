@@ -1191,10 +1191,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-20T14:00:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/XNht63f7zCs",
+   "posted_at": "2026-10-20T12:00:02+00:00",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.inner_text: Error: strict mode violation: locator(\"[role=dialog]\") resolved to 2 elements:"
+   }
   },
   {
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_21_minions.mp4",
