@@ -1243,10 +1243,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-20T16:00:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/U0wTWNRIGnQ",
+   "posted_at": "2026-10-20T14:00:03+00:00",
+   "whop_result": {
+    "youtube": "submitted"
+   }
   },
   {
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_16_code_clix.mp4",
