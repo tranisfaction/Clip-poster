@@ -1269,10 +1269,15 @@
    "campaign": "clix_yeat",
    "whop": "/c/campaigns/9923b42f-e9c8-45c7-ad65-4dad8f37dd6a",
    "when": "2026-10-20T17:00:00+02:00",
-   "status": "queued",
+   "status": "posted",
    "sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/sA1aMPrIOTM",
+   "posted_at": "2026-10-20T15:00:03+00:00",
+   "whop_result": {
+    "youtube": "NOT confirmed: Page.wait_for_selector: Timeout 45000ms exceeded."
+   }
   },
   {
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1016_03_henchmen_here.mp4",
