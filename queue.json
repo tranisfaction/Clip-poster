@@ -1473,6 +1473,27 @@
    "whop_sites": [
     "youtube"
    ]
+  },
+  {
+   "when": "2026-10-25T22:30:00+01:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_10_cybertruck_tax.mp4",
+   "title": "Marlon brought Lacy's Cybertruck back at 0% 💀 #Lacy #shorts",
+   "caption": "Marlon brought Lacy's Cybertruck back at 0%… now it costs 10 gifted 💀\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
+   "status": "queued",
+   "tags": [
+    "lacy",
+    "lacy clips",
+    "twitch clips",
+    "silky",
+    "marlon",
+    "streamer"
+   ],
+   "categoryId": 24,
+   "campaign": "lacy",
+   "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+   "whop_sites": [
+    "youtube"
+   ]
   }
  ]
 }
