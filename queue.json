@@ -53,6 +53,28 @@
     ],
     "categoryId": 20,
     "rules": "https://whop.com/contentrewards/exp_KZckYGtrnbujDg/app/ (closes 2026-10-20 14:00 ET; clips from the 10.16.26 Clix x Yeat stream only)"
+   },
+   "lacy": {
+    "title": "$25,000 Lacy 30 Day Campaign (Reach)",
+    "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+    "streamer": "LACY",
+    "caption_needs": [
+     "Lacy",
+     "#Lacy"
+    ],
+    "tags": [
+     "lacy",
+     "lacy clips",
+     "twitch clips",
+     "silky",
+     "marlon",
+     "streamer"
+    ],
+    "categoryId": 24,
+    "rules": "https://reachclipping.com/Lacy (Lacy main focus, not negative, no logos, 50%+ US/UK/CA/AU/NZ, submit within 30 min)",
+    "whop_sites": [
+     "youtube"
+    ]
    }
   }
  },
