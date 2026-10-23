@@ -1494,6 +1494,27 @@
    "whop_sites": [
     "youtube"
    ]
+  },
+  {
+   "when": "2026-10-26T00:30:00+01:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_04_im_an_idiot.mp4",
+   "title": "Lacy ranted… then re-read the tweet 💀 #Lacy #shorts",
+   "caption": "Lacy went on a full rant about Ludwig's tweet… then re-read it 💀 \"I'm an idiot\"\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
+   "status": "queued",
+   "tags": [
+    "lacy",
+    "lacy clips",
+    "twitch clips",
+    "silky",
+    "marlon",
+    "streamer"
+   ],
+   "categoryId": 24,
+   "campaign": "lacy",
+   "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+   "whop_sites": [
+    "youtube"
+   ]
   }
  ]
 }
