@@ -74,7 +74,8 @@ def pending(queue: dict) -> list:
         if not post.get("whop"):
             continue
         posted = datetime.fromisoformat(post.get("posted_at") or post["when"])
-        for site in SITES:
+        # "whop_sites" limits which links go to Whop (a campaign may only pay for YouTube Shorts)
+        for site in post.get("whop_sites", SITES):
             if post.get(site) and site not in post.get("whop_result", {}):
                 if now - posted > timedelta(minutes=WINDOW):
                     post.setdefault("whop_result", {})[site] = "too late (over 30 minutes)"
