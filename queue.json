@@ -1410,6 +1410,27 @@
    "whop_sites": [
     "youtube"
    ]
+  },
+  {
+   "when": "2026-10-25T00:30:00+02:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_15_not_my_girl.mp4",
+   "title": "Lacy is NOT taking Silky to NYC 😤 #Lacy #shorts",
+   "caption": "Chat wants Lacy to take Silky to NYC for his birthday… he'll get him a toy car 😤\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
+   "status": "queued",
+   "tags": [
+    "lacy",
+    "lacy clips",
+    "twitch clips",
+    "silky",
+    "marlon",
+    "streamer"
+   ],
+   "categoryId": 24,
+   "campaign": "lacy",
+   "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+   "whop_sites": [
+    "youtube"
+   ]
   }
  ]
 }
