@@ -21,7 +21,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 QUEUE = Path(__file__).resolve().parent / "queue.json"
-APP_PAGE = "https://whop.com/discover/app/app_QRxsQodZgK1r4D/"   # Content Rewards app
+APP_PAGE = "https://whop.com/contentrewards/exp_KZckYGtrnbujDg/app/"   # Content Rewards app (the old /discover/app/ link now shows the store page)
 WINDOW = 29        # minutes after posting that Whop still takes the link
 SITES = ("youtube", "instagram", "tiktok")
 
