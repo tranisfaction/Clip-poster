@@ -1360,7 +1360,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_07_my_fork.mp4",
    "title": "Lacy's fork was worth more than his Lamborghini 😭 #Lacy #shorts",
    "caption": "Lacy would rather have this fork than his Lamborghini… then it broke 😭🍴\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "lacy",
     "lacy clips",
@@ -1374,7 +1374,14 @@
    "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "whop_sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/jWlEO6iD01s",
+   "instagram": "https://www.instagram.com/reel/De22UpllNs4/",
+   "posted_at": "2026-10-24T00:30:58+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "submitted"
+   }
   },
   {
    "when": "2026-10-24T20:30:00+02:00",
