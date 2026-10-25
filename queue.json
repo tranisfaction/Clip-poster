@@ -1472,7 +1472,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_09_red_velvet_soup.mp4",
    "title": "Lacy and the boys tried to bake a birthday cake 💀 #Lacy #shorts",
    "caption": "Lacy and the boys tried to bake Silky a birthday cake… it became red velvet soup 💀🎂\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "lacy",
     "lacy clips",
@@ -1486,7 +1486,14 @@
    "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "whop_sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/FTbSzvL79mk",
+   "instagram": "https://www.instagram.com/reel/De5bHzzkyXf/",
+   "posted_at": "2026-10-25T00:30:59+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "NOT confirmed: Locator.inner_text: Error: strict mode violation: locator(\"[role=dialog]\") resolved to 2 elements:"
+   }
   },
   {
    "when": "2026-10-25T20:30:00+01:00",
