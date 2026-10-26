@@ -1640,7 +1640,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1021_21_experience_not_in_bed.mp4",
    "title": "Chat's birthday gift ideas for Silky 💀 #Lacy #shorts",
    "caption": "Lacy reacting to chat's birthday gift ideas for Silky 💀\n\n#Lacy #lacyclips #twitchclips #streamer #funny",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "lacy",
     "lacy clips",
@@ -1654,7 +1654,14 @@
    "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "whop_sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/8vSBokfVv3w",
+   "instagram": "https://www.instagram.com/reel/De-QG27ki24/",
+   "posted_at": "2026-10-26T21:30:46+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "submitted"
+   }
   }
  ]
 }
