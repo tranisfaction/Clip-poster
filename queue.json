@@ -1662,6 +1662,27 @@
    "whop_result": {
     "youtube": "submitted"
    }
+  },
+  {
+   "when": "2026-11-12T20:30:00+01:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1107_01_ps5_pro_fakeout.mp4",
+   "title": "They gave Lacy a PS5 Pro… then took it back 💀 #Lacy #shorts",
+   "caption": "They gave Lacy a PS5 Pro for 1M subs… \"it's not for you, it's mine\" 💀\n\n#Lacy #lacyclips #twitch #twitchclips #streamer #funny",
+   "status": "queued",
+   "tags": [
+    "lacy",
+    "lacy clips",
+    "twitch clips",
+    "silky",
+    "marlon",
+    "streamer"
+   ],
+   "categoryId": 24,
+   "campaign": "lacy",
+   "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+   "whop_sites": [
+    "youtube"
+   ]
   }
  ]
 }
