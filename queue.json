@@ -1746,6 +1746,27 @@
    "whop_sites": [
     "youtube"
    ]
+  },
+  {
+   "when": "2026-11-13T20:30:00+01:00",
+   "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1107_06_token_take.mp4",
+   "title": "Lacy's fake rant about the Pirate Token 💀 #Lacy #shorts",
+   "caption": "Lacy goes off on rich streamers taking the Pirate Token from poor kids… \"nah I'm trolling\" 💀\n\n#Lacy #lacyclips #twitch #twitchclips #streamer #funny",
+   "status": "queued",
+   "tags": [
+    "lacy",
+    "lacy clips",
+    "twitch clips",
+    "silky",
+    "marlon",
+    "streamer"
+   ],
+   "categoryId": 24,
+   "campaign": "lacy",
+   "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
+   "whop_sites": [
+    "youtube"
+   ]
   }
  ]
 }
