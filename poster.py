@@ -22,7 +22,8 @@ Usage:
   python poster.py wait                keep the runner up until the next post is about due
   python poster.py refresh-ig          extend the Instagram token (monthly workflow)
 
-Secrets come from the environment: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN, IG_TOKEN.
+Secrets come from the environment: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN, IG_TOKEN,
+YT2_REFRESH_TOKEN (second YouTube channel, for posts with "channel": "yt2").
 """
 import argparse
 import json
@@ -80,7 +81,9 @@ def download(link: str, dest: Path) -> Path:
 def post_youtube(video: Path, post: dict, defaults: dict) -> str:
     token, _ = call("https://oauth2.googleapis.com/token", {
         "grant_type": "refresh_token", "client_id": os.environ["YT_CLIENT_ID"],
-        "client_secret": os.environ["YT_CLIENT_SECRET"], "refresh_token": os.environ["YT_REFRESH_TOKEN"]})
+        "client_secret": os.environ["YT_CLIENT_SECRET"],
+        # "channel": "yt2" on a post sends it to the second channel (@twitchmomentum)
+        "refresh_token": os.environ["YT2_REFRESH_TOKEN" if post.get("channel") == "yt2" else "YT_REFRESH_TOKEN"]})
     auth = {"Authorization": "Bearer " + token["access_token"]}
     meta = {
         "snippet": {"title": post["title"], "description": post.get("description", post["caption"]),
