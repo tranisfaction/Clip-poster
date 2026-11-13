@@ -1836,7 +1836,7 @@
    "url": "https://raw.githubusercontent.com/tranisfaction/Clip-poster/clips/1107_08_marcus_gift.mp4",
    "title": "Drew got a gift \"from Marcus\" 💀 #Lacy #shorts",
    "caption": "Drew got candy \"from Marcus\"… and Lacy watched him throw it 💀\n\n#Lacy #lacyclips #twitch #twitchclips #streamer #funny",
-   "status": "queued",
+   "status": "posted",
    "tags": [
     "lacy",
     "lacy clips",
@@ -1850,7 +1850,14 @@
    "whop": "/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "whop_sites": [
     "youtube"
-   ]
+   ],
+   "youtube": "https://www.youtube.com/shorts/deVzDnGUeHc",
+   "instagram": "https://www.instagram.com/reel/Dfs0LZQjr2Q/",
+   "posted_at": "2026-11-13T23:31:01+00:00",
+   "tiktok_error": "Locator.click: Timeout 30000ms exceeded.",
+   "whop_result": {
+    "youtube": "submitted"
+   }
   },
   {
    "when": "2026-11-14T02:30:00+01:00",
